@@ -1,13 +1,13 @@
 {
-  "name": "meteor-assist",
+  "name": "meteor-assist-sanuker",
   "main": "./lib/meteor-assist",
-  "version": "0.3.0",
-  "description": "Create meteor (html) / (js, coffee) / (css, less) files with ease",
+  "version": "1.0.0",
+  "description": "Create meteor (html) / (js, coffee) / (css, less, scss) files with ease (Updated with SCSS support)",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "meteor-assist:toggle"
   },
-  "repository": "https://github.com/sdinesh86/meteor-assist",
+  "repository": "https://github.com/sanukerinc/meteor-assist",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

@@ -58,9 +58,10 @@ class MeteorAssistEditorView
     switch fileType
       when "CSS" then ""
       when "SASS" then ""
+      when "SCSS" then ""
       when "LESS" then ""
       when "HTML" then "<template name='#{templateName}'>\n\t\n</template>"
-      when "JS" then "Template.#{templateName}.helpers({\n\t});\n\nTemplate.#{templateName}.events({\n\t});\n\nTemplate.#{templateName}.onRendered(function ( ){\n\t})"
+      when "JS" then "Template.#{templateName}.helpers({\n});\n\nTemplate.#{templateName}.events({\n});\n\nTemplate.#{templateName}.onCreated(function(){\n});\n\nTemplate.#{templateName}.onRendered(function(){\n})"
       when "COFFEE" then "Template.#{templateName}.helpers \n\t\n\nTemplate.#{templateName}.events\n\t \n\nTemplate.#{templateName}.onRendered -> \n\t"
       else null
 
@@ -105,11 +106,13 @@ class MeteorAssistEditorView
           when "css" then "#{templateName}_style.css"
           when "less" then "#{templateName}_style.less"
           when "sass" then "#{templateName}_style.sass"
+          when "scss" then "#{templateName}_style.scss"
           else "#{templateName}_style.css"
         format: switch atom.config.get('meteor-assist.stylesFormat')
           when "css" then "CSS"
           when "less" then "LESS"
           when "sass" then "SASS"
+          when "scss" then "SCSS"
           else "CSS"
     try
       # create fodler for template
@@ -122,7 +125,7 @@ class MeteorAssistEditorView
       for key, val of $filesArray
         # console.log @getFileContents templateName, val.format
         doesExists = fs.isFileSync val.filename
-        
+
         unless doesExists
           fs.writeFileSync val.filename, @getFileContents(templateName, val.format)
         else

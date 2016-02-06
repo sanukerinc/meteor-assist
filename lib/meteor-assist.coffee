@@ -13,7 +13,7 @@ module.exports = MeteorAssist =
     stylesFormat:
       type: 'string'
       default: 'less'
-      enum: ['less','sass','css']
+      enum: ['less','sass','css','scss']
     scriptFormat:
       type: 'string'
       default: 'coffeescript'

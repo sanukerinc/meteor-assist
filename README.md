@@ -1,5 +1,6 @@
-# meteor-assist package
+# meteor-assist-sanuker package
 
-Create meteor (html) / (js, coffee) / (css, less) files with ease
+Create meteor (html) / (js, coffee) / (css, less, scss) files with ease
+Updated with support to SASS files generation. Also added onCreated snippet to js file generated.
 
-This package is replaced with a new more feature rich package [Template Generator](https://atom.io/packages/template-generator)
+Created with Love by Sanuker Inc. Limited
