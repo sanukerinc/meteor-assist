@@ -9,14 +9,14 @@ module.exports = MeteorAssist =
     precompInFolder:
       type: 'boolean'
       default: true
-      title: 'Create template files is folder'
+      title: 'Create template files in folder'
     stylesFormat:
       type: 'string'
-      default: 'less'
+      default: 'scss'
       enum: ['less','sass','css','scss']
     scriptFormat:
       type: 'string'
-      default: 'coffeescript'
+      default: 'javascript'
       enum: ['coffeescript', 'javascript']
 
   activate: (state) ->
