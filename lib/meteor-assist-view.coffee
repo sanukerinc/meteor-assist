@@ -84,7 +84,7 @@ class MeteorAssistEditorView
       @showErrorMessage( 'Invalid template name, template name cannot contain spaces / special characters like "-%$#@!"' )
       return
 
-    $precompInFolder = atom.config.get('meteor-assist.precompInFolder')
+    $precompInFolder = atom.config.get('meteor-assist-sanuker.precompInFolder')
 
     $targetFolder = if $precompInFolder then path.join(tvObj.selectedPath, templateName) else tvObj.selectedPath
 
@@ -93,22 +93,22 @@ class MeteorAssistEditorView
         filename: path.join $targetFolder, "#{templateName}_template.html"
         format: "HTML"
       script:
-        filename: path.join $targetFolder, switch atom.config.get('meteor-assist.scriptFormat')
+        filename: path.join $targetFolder, switch atom.config.get('meteor-assist-sanuker.scriptFormat')
           when "javascript" then "#{templateName}_script.js"
           when "coffeescript" then "#{templateName}_script.coffee"
           else "#{templateName}_script.js"
-        format: switch atom.config.get('meteor-assist.scriptFormat')
+        format: switch atom.config.get('meteor-assist-sanuker.scriptFormat')
           when "javascript" then "JS"
           when "coffeescript" then "COFFEE"
           else "JS"
       style:
-        filename: path.join $targetFolder, switch atom.config.get('meteor-assist.stylesFormat')
+        filename: path.join $targetFolder, switch atom.config.get('meteor-assist-sanuker.stylesFormat')
           when "css" then "#{templateName}_style.css"
           when "less" then "#{templateName}_style.less"
           when "sass" then "#{templateName}_style.sass"
           when "scss" then "#{templateName}_style.scss"
           else "#{templateName}_style.css"
-        format: switch atom.config.get('meteor-assist.stylesFormat')
+        format: switch atom.config.get('meteor-assist-sanuker.stylesFormat')
           when "css" then "CSS"
           when "less" then "LESS"
           when "sass" then "SASS"

@@ -10,7 +10,7 @@ describe "MeteorAssist", ->
 
   beforeEach ->
     workspaceElement = atom.views.getView(atom.workspace)
-    activationPromise = atom.packages.activatePackage('meteor-assist')
+    activationPromise = atom.packages.activatePackage('meteor-assist-sanuker')
 
   describe "when the meteor-assist:toggle event is triggered", ->
     it "hides and shows the modal panel", ->
