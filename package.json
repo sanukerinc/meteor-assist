@@ -1,7 +1,7 @@
 {
   "name": "meteor-assist-sanuker",
   "main": "./lib/meteor-assist",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Create meteor (html) / (js, coffee) / (css, less, scss) files with ease (Updated with SCSS support)",
   "keywords": [],
   "activationCommands": {
