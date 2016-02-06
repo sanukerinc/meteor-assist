@@ -2,6 +2,6 @@
 * Every feature added
 * Every bug fixed
 
-## 1.0.0 - Sanuker meteor-assist version
+## 2.0.1 - Sanuker meteor-assist version
 * Added Sass file support
 * Added onCreate snippet
