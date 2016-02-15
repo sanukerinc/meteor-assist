@@ -61,7 +61,7 @@ class MeteorAssistEditorView
       when "SCSS" then ""
       when "LESS" then ""
       when "HTML" then "<template name='#{templateName}'>\n\t\n</template>"
-      when "JS" then "Template.#{templateName}.helpers({\n});\n\nTemplate.#{templateName}.events({\n});\n\nTemplate.#{templateName}.onCreated(function(){\n});\n\nTemplate.#{templateName}.onRendered(function(){\n})"
+      when "JS" then "Template.#{templateName}.helpers({\n\n\t});\n\nTemplate.#{templateName}.events({\n\n\t});\n\nTemplate.#{templateName}.onCreated(function(){\n\n\t});\n\nTemplate.#{templateName}.onRendered(function(){\n\n\t});"
       when "COFFEE" then "Template.#{templateName}.helpers \n\t\n\nTemplate.#{templateName}.events\n\t \n\nTemplate.#{templateName}.onRendered -> \n\t"
       else null
 
